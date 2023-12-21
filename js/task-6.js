@@ -3,3 +3,6 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+
+const input = document.querySelector('input');
+const boxes = document.querySelector('#boxes');
