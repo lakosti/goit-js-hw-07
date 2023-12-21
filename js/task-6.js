@@ -11,7 +11,6 @@ const commonDiv = document.querySelector('#boxes');
 btnCreate.addEventListener('click', () => {
   let n = quantityDiv.value;
   input.value = '';
-  console.log(n);
 
   let side = 30;
   for (let i = 1; i <= n; i += 1) {
