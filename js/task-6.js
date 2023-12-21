@@ -19,12 +19,14 @@ btnCreate.addEventListener('click', () => {
     square.style.height += `${side}px`;
     side += 10;
     commonDiv.appendChild(square);
+    boxes.style.backgroundColor = '#f6f6fe';
     square.style.backgroundColor = getRandomHexColor();
   }
 });
 
 btnDestroy.addEventListener('click', () => {
   commonDiv.innerHTML = '';
+  boxes.style.backgroundColor = 'transparent';
 });
 
 function getRandomHexColor() {
