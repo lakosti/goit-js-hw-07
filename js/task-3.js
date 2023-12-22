@@ -4,9 +4,5 @@ const greet = document.querySelector('#name-output');
 userName.addEventListener('input', onInput);
 
 function onInput(evt) {
-  greet.textContent = evt.target.value.trim();
-
-  if (!greet.textContent) {
-    greet.textContent = 'Anonymous';
-  }
+  greet.textContent = evt.target.value.trim() || 'Anonymous';
 }
