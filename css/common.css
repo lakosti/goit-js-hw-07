@@ -177,6 +177,7 @@ body ul li {
 }
 
 #boxes {
+  background-color: #f6f6fe;
   border-radius: 8px;
   display: flex;
   flex-wrap: wrap;

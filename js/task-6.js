@@ -1,32 +1,32 @@
-const input = document.querySelector('input');
-const boxes = document.querySelector('#boxes');
-
 const controls = document.querySelector('#controls');
-const quantityDiv = controls.querySelector('input');
-
 const btnCreate = controls.querySelector('[data-create]');
 const btnDestroy = controls.querySelector('[data-destroy]');
-const commonDiv = document.querySelector('#boxes');
+const boxesContainer = document.querySelector('#boxes');
+const inputElement = controls.querySelector('input');
 
 btnCreate.addEventListener('click', () => {
-  let n = quantityDiv.value;
-  input.value = '';
+  let n = inputElement.value;
+
+  if (n < 1 || n > 100) {
+    return;
+  }
+
+  inputElement.value = '';
+  boxesContainer.textContent = '';
 
   let side = 30;
   for (let i = 1; i <= n; i += 1) {
     const square = document.createElement('div');
-    square.style.width += `${side}px`;
-    square.style.height += `${side}px`;
+    square.style.width = `${side}px`;
+    square.style.height = `${side}px`;
     side += 10;
-    commonDiv.appendChild(square);
-    boxes.style.backgroundColor = '#f6f6fe';
     square.style.backgroundColor = getRandomHexColor();
+    boxesContainer.appendChild(square);
   }
 });
 
 btnDestroy.addEventListener('click', () => {
-  commonDiv.innerHTML = '';
-  boxes.style.backgroundColor = 'transparent';
+  boxesContainer.innerHTML = '';
 });
 
 function getRandomHexColor() {
