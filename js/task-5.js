@@ -17,7 +17,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const changeColorBtn = document.querySelector('.change-color'); // Має бути використаний селектор класу
+const changeColorBtn = document.querySelector('.change-color');
 const body = document.querySelector('body');
 const colorSpan = document.querySelector('.color');
 
