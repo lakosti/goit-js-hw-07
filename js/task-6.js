@@ -8,6 +8,7 @@ btnCreate.addEventListener('click', () => {
   let n = inputElement.value;
 
   if (n < 1 || n > 100) {
+    alert('Enter a number from 1 to 100 ');
     return;
   }
 
